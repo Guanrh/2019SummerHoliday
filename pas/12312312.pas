@@ -1,0 +1,38 @@
+var
+	i:longint;
+        x:array[1..2000000] of string;
+	tot,j,k,cnt,o,n:longint;
+        ss,sss:string;
+procedure dg(t:Longint;st:string);
+var i:char;
+begin
+	if t>n then
+	begin
+		o:=0;
+                for j:=1 to n do  if st[j]<>sss[j] then inc(o);
+                if (o=k) then
+                begin
+                        inc(cnt);
+                        x[cnt]:=st;
+                end;
+		exit;
+	end;
+	for i:='a' to 'z' do
+		dg(t+1,st+i);
+end;
+begin
+        assign(input,'string.in');reset(input);
+        assign(output,'string.out');rewrite(output);
+        readln(n,k);
+        readln(sss);
+        readln(ss);
+        dg(1,'');
+        for i:=1 to cnt do
+                if (x[i]=ss) then
+                begin
+                        writeln(i);
+                        halt;
+                end;
+        close(input);
+        close(output);
+end.

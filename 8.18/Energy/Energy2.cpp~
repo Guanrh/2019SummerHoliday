@@ -1,0 +1,24 @@
+#include <cstdio>
+#include <algorithm>
+
+using namespace std;
+
+struct node
+{
+	int f,w,e;
+}a[1100];
+
+int n;
+
+int cmp(node a,node b){return a.e<b.e}
+
+int main()
+{
+	scanf("%d%d%d",&a[i].f,&a[i].e,&a[i].w);
+	sort(a+1,a+1+n,cmp);
+	
+	for (int i=1;i<=n;i++)
+	{
+		
+	}	
+}
